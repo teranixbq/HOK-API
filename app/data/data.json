@@ -1,18 +1,26 @@
 [
     {
         "id": "1",
-        "name": "../route",
-        "category": "Fruit"
-
+        "name": "agudo",
+        "picture": "Fruit",
+        "role": "jungler",
+        "type_hero": "human",
+        "skill": "sorcery"
     },
     {
         "id": "2",
-        "name": "Carrot",
-        "category": "Vegetable"
+        "name": "ril",
+        "picture": "Fruit",
+        "role": "jungler",
+        "type_hero": "human",
+        "skill": "sorcery"
     },
     {
         "id": "3",
-        "name": "Orange",
-        "category": "Fruit"
+        "name": "dd",
+        "picture": "Fruit",
+        "role": "jungler",
+        "type_hero": "human",
+        "skill": "sorcery"
     }
 ]

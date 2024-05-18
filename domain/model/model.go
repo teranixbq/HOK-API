@@ -5,6 +5,6 @@ type Hero struct {
 	Name     string
 	Picture  string
 	Role     string
-	TypeHero string
+	Type_Hero string
 	Skill    string
 }

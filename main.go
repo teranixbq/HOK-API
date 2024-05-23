@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"hokapi/internal/app/data"
-	"hokapi/internal/app/route"
+	"hokapi/app/data"
+	"hokapi/app/route"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -13,15 +13,14 @@ import (
 func main() {
 	f := fiber.New()
 
-	
-	json,err := data.InitJson()
-    if err != nil {
-        fmt.Println(err)
-    }
+	json, err := data.InitJson()
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	f.Use(cors.New())
-    
-    route.InitRoute(f,json)
+
+	route.InitRoute(f, json)
 	f.Use(logger.New(logger.Config{
 		Format: "[${ip}]:${port} ${status} - ${method} ${path}\n",
 	}))

@@ -3,7 +3,9 @@ package main
 import (
 	"fmt"
 	"hokapi/app/data"
+	"hokapi/app/middleware"
 	"hokapi/app/route"
+	"hokapi/scheduler"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -12,6 +14,7 @@ import (
 
 func main() {
 	f := fiber.New()
+	go scheduler.Scheduler()
 
 	json, err := data.InitJson()
 	if err != nil {
@@ -19,6 +22,8 @@ func main() {
 	}
 
 	f.Use(cors.New())
+
+	f.Use(middleware.RequestLimitMiddleware)
 
 	route.InitRoute(f, json)
 	f.Use(logger.New(logger.Config{

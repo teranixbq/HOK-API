@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"hokapi/app/data"
-	"hokapi/app/route"
+	"hokapi/internal/app/data"
+	"hokapi/internal/app/route"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"

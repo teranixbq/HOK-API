@@ -1,0 +1,12 @@
+{
+  "name": "hok-api",
+  "version": "1.0.0",
+  "description": "hero honor of kings data open api",
+  "main": "index.js",
+  "scripts": {
+    "start": "go build -o build/app main.go && chmod +x build/app && node api/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

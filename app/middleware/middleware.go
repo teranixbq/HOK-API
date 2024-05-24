@@ -14,7 +14,7 @@ func RequestLimitMiddleware(c *fiber.Ctx) error {
 
 	if RequestCount > 1000 {
 		return c.Status(fiber.StatusTooManyRequests).JSON(fiber.Map{
-			"message": "Too many requests",
+			"message": "too many requests, daily limit reached",
 		})
 	}
 	RequestCount++

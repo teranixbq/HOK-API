@@ -12,7 +12,7 @@ func RequestLimitMiddleware(c *fiber.Ctx) error {
 	mutex.Lock()
 	defer mutex.Unlock()
 
-	if RequestCount > 1000 {
+	if RequestCount > 600 {
 		return c.Status(fiber.StatusTooManyRequests).JSON(fiber.Map{
 			"message": "too many requests, daily limit reached",
 		})

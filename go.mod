@@ -3,7 +3,7 @@ module hokapi
 go 1.21
 
 require (
-	github.com/gofiber/fiber/v2 v2.52.4
+	github.com/gofiber/fiber/v2 v2.52.5
 	github.com/teranixbq/gfunc v0.1.6
 )
 
